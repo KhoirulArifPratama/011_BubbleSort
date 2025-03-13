@@ -2,9 +2,8 @@
 #include <String>
 using namespace std;
 
-int arr{20};
+int arr[20];
 int n;
-
 
 void input(){
     int d;
@@ -26,6 +25,7 @@ for (int i = 0; i <n; i++){
     cout << "Data ke-" << (i+1) << ";";
     cin >> arr[i];
 }
+
 }
 void bubbleSortArray(){
     int pass = 1; //step 1
@@ -48,6 +48,7 @@ void bubbleSortArray(){
 
         }while (pass <= n - 1); //step 5
   }
+
   void display(){
     cout << endl;
     cout << "=================================" << endl;
@@ -55,7 +56,7 @@ void bubbleSortArray(){
     cout << "=================================" << endl;
     cout << endl;
     for (int j = 0; j < n; j++){
-        cout << arr[j]; 
+        cout << arr[j];
         if (j < n -1){
             cout <<" -->";
 
@@ -70,4 +71,13 @@ void bubbleSortArray(){
 
   }
 
-  
+  int main()
+  {
+    input();
+
+    bubbleSortArray();
+    display();
+
+    system("pause");
+    return 0;
+  }
